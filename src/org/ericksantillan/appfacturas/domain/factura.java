@@ -12,9 +12,8 @@ public class factura {
     private int indiceItems;
     public static final int MAX_ITEMS=10;
     private static int ultimofolio;
+
     //constructor
-
-
     public factura(String descripcion, Cliente cliente) {
         this.descripcion = descripcion;
         this.cliente = cliente;
@@ -55,6 +54,7 @@ public class factura {
     public ItemFactura[] getItems() {
         return items;
     }
+
     //add
     public void itemfactura(ItemFactura item){
         if (indiceItems<MAX_ITEMS) {

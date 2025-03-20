@@ -6,10 +6,12 @@ public class Producto {
     private float precio;
     private static int ultimocodigo;
 
+    //constructor de contador
     public Producto() {
         this.codigo=++ultimocodigo;
     }
 
+    //getter and setter
     public int getCodigo() {
         return codigo;
     }
@@ -29,6 +31,6 @@ public class Producto {
     public void setPrecio(float precio) {
         this.precio = precio;
     }
-    //valor 
+
 }
 

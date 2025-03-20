@@ -4,6 +4,7 @@ public class Cliente {
     private String nombre;
     private String nif;
 
+    //getter and setter
     public String getNif() {
         return nif;
     }
