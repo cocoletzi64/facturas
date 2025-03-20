@@ -76,7 +76,10 @@ public class factura {
 public String detalle (){
         return "Factura No."+folio
                 +"\nCliente: "+cliente
+                +"\nNif: "+cliente.getNif()
                 +"\ndesecripcion: "+descripcion+
-                "\nfecha: " +fecha;
+                "\nfecha: " +fecha
+                +"\nNombre: " +items.getClass().getName();
+
 }
 }
