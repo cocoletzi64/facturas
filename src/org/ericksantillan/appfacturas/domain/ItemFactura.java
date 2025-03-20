@@ -23,8 +23,13 @@ public class ItemFactura {
     public Producto getProducto() {
         return producto;
     }
-
     public void setProducto(Producto producto) {
         this.producto = producto;
     }
+
+    //metodo
+    public float calcularimporte(){
+        return cantidad*producto.getPrecio();
+    }
+
 }

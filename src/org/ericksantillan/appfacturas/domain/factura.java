@@ -10,7 +10,7 @@ public class factura {
     private Cliente cliente;
     private ItemFactura[] items;
     private int indiceItems;
-    public static final int MAX_ITEMS=10;
+    public static final int MAX_ITEMS=12;
     private static int ultimofolio;
 
     //constructor
@@ -61,4 +61,22 @@ public class factura {
             this.items[indiceItems++] = item;
         }
     }
+    //metodo
+    public float total() {
+        float valor = 0.0f;
+        for (int i = 0; i < MAX_ITEMS; i++) {
+            if (items== null) {
+                continue;
+            }
+                valor += this.items[i].calcularimporte();
+
+        }
+        return valor;
+}
+public String detalle (){
+        return "Factura No."+folio
+                +"\nCliente: "+cliente
+                +"\ndesecripcion: "+descripcion+
+                "\nfecha: " +fecha;
+}
 }
