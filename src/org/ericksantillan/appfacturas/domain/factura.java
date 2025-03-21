@@ -102,7 +102,7 @@ public class factura {
                      items[i].calcularimporte()+"\n";
 
         }
-        lista+="total"+total();
+        lista+="\ntotal: $"+total();
         return lista;
     }
 

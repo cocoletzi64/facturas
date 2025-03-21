@@ -15,7 +15,7 @@ public class ejemplofactura {
         erick.setNombre("Erick");
 
         Scanner s=new Scanner(System.in);
-        System.out.println("ingrese la descripcion de la factura: ");
+        System.out.print("ingrese la descripcion de la factura: ");
         String descripcion=s.nextLine();
         factura factura=new factura(descripcion,erick);
 
@@ -28,7 +28,7 @@ public class ejemplofactura {
         for (int i=0; i<5; i++){
             producto1=new Producto();
             System.out.print("Ingrese producto No."+producto1.getCodigo()+": ");
-            nombre =s.next();
+            nombre =s.nextLine();
             producto1.setNombre(nombre);
 
             System.out.print("Ingrese el precio del producto: ");
@@ -41,6 +41,7 @@ public class ejemplofactura {
             factura.additemfactura(item);
 
             System.out.println("\n");
+            s.nextLine();//se agrega para que no haya problema si pones palabras de una o mas lineas
         }
         System.out.println(factura.detalle());
         System.out.println(factura.arreglodetalle());
