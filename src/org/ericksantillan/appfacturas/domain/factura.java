@@ -68,43 +68,44 @@ public class factura {
     public float total() {
         float valor = 0.0f;
         for (int i = 0; i < MAX_ITEMS; i++) {
-            if (items == null) {
+            if (items[i] == null) {
                 continue;
             }
-            valor += this.items[i].calcularimporte();
+            valor += items[i].calcularimporte();
 
         }
         return valor;
     }
 
     public String detalle() {
-        SimpleDateFormat fechado = new SimpleDateFormat("dd'de' MMMM, yyyy");
+        SimpleDateFormat fechado = new SimpleDateFormat("dd' de ' MMMM, yyyy");
 
         return "Factura No." + folio
                 + "\nCliente: " + cliente
                 + "\nNif: " + cliente.getNif()
-                + "\ndesecripcion: " + descripcion
-                + "\n#+\tNombre"+"\t$"+"\tCant."+"\tTotal\n"
-                + "\nfecha Emision: " + fechado.format(fecha);
+                + "\ndescripcion: " + descripcion
+                + "\nfecha Emision: " + fechado.format(fecha)+"\n"
+                + "\n#"+"\tNombre"+"\t$"+"\tCant."+"\tTotal";
+
     }
 
     public String arreglodetalle() {
-        String lista="Lista de productos: \n";
+        String lista="";
         for (int i = 0; i < MAX_ITEMS; i++) {
-            if (items == null) {
+            if (items[i] == null) {
                 continue;
             }
-             lista+=items[i].getProducto().getCodigo()+"\t"+
-                    items[i].getProducto().getNombre()+"\t"+
-                    items[i].getProducto().getPrecio()+"\t"+
+             lista+= items[i].getProducto().getCodigo()+"\t"+
+                     items[i].getProducto().getNombre()+"\t"+
+                     items[i].getProducto().getPrecio()+"\t"+
                      items[i].getCantidad()+"\t"+
                      items[i].calcularimporte()+"\n";
 
         }
-        lista+=total();
+        lista+="total"+total();
         return lista;
-
     }
+
 }
 
 

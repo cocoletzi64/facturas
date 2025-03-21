@@ -35,7 +35,7 @@ public class ejemplofactura {
             precio =s.nextFloat();
             producto1.setPrecio(precio);
 
-            System.out.print("Ingrese la cantidad del producto");
+            System.out.print("Ingrese la cantidad del producto: ");
             cantidad =s.nextInt();
             ItemFactura item=new ItemFactura(cantidad,producto1);
             factura.additemfactura(item);
