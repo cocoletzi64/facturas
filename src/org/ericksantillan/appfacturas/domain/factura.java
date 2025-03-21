@@ -58,7 +58,7 @@ public class factura {
     }
 
     //add
-    public void itemfactura(ItemFactura item) {
+    public void additemfactura(ItemFactura item) {
         if (indiceItems < MAX_ITEMS) {
             this.items[indiceItems++] = item;
         }

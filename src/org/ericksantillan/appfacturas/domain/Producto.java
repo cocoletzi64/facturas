@@ -8,7 +8,7 @@ public class Producto {
 
     //constructor de contador
     public Producto() {
-        this.codigo=++ultimocodigo;
+        this.codigo=ultimocodigo++;
     }
 
     //getter and setter
