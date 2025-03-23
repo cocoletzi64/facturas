@@ -67,7 +67,7 @@ public class factura {
     //metodo
     public float total() {
         float valor = 0.0f;
-        for (int i = 0; i < MAX_ITEMS; i++) {
+        for (int i = 0; i < indiceItems; i++) {
             if (items[i] == null) {
                 continue;
             }
@@ -91,11 +91,11 @@ public class factura {
 
     public String arreglodetalle() {
         String lista="";
-        for (int i = 0; i < MAX_ITEMS; i++) {
+        for (int i = 0; i < indiceItems; i++) {
             if (items[i] == null) {
                 continue;
             }
-             lista+= items[i]+"\n";
+             lista+= "\n"+items[i].toString();
 
 
         }

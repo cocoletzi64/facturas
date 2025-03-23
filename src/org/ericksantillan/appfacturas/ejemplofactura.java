@@ -12,13 +12,12 @@ public class ejemplofactura {
 
         Scanner s=new Scanner(System.in);
         System.out.print("ingrese la descripcion de la factura: ");
-        String descripcion=s.nextLine();
 
-        factura factura=new factura(descripcion,erick);
+        factura factura=new factura(s.nextLine(),erick);
 
         System.out.println("\n");
 
-        for (int i=0; i<5; i++){
+        for (int i=0; i<2; i++){
             Producto producto1=new Producto();
             System.out.print("Ingrese producto No."+producto1.getCodigo()+": ");
             producto1.setNombre(s.nextLine());
