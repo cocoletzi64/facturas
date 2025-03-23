@@ -32,4 +32,10 @@ public class ItemFactura {
         return cantidad*producto.getPrecio();
     }
 
+    @Override
+    public String toString() {
+        return producto+
+                "\t" + cantidad +
+                "\t"+ calcularimporte();
+    }
 }

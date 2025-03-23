@@ -8,7 +8,7 @@ public class Producto {
 
     //constructor de contador
     public Producto() {
-        this.codigo=ultimocodigo++;
+        this.codigo=++ultimocodigo;
     }
 
     //getter and setter
@@ -32,5 +32,11 @@ public class Producto {
         this.precio = precio;
     }
 
+    @Override
+    public String toString() {
+        return  codigo +
+                "\t" + nombre +
+                "\t"+ precio ;
+    }
 }
 

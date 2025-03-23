@@ -95,17 +95,18 @@ public class factura {
             if (items[i] == null) {
                 continue;
             }
-             lista+= items[i].getProducto().getCodigo()+"\t"+
-                     items[i].getProducto().getNombre()+"\t"+
-                     items[i].getProducto().getPrecio()+"\t"+
-                     items[i].getCantidad()+"\t"+
-                     items[i].calcularimporte()+"\n";
+             lista+= items[i]+"\n";
+
 
         }
         lista+="\ntotal: $"+total();
         return lista;
     }
 
+    @Override
+    public String toString() {
+        return detalle()+arreglodetalle();
+    }
 }
 
 
